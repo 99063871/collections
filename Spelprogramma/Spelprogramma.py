@@ -2,8 +2,8 @@ import random
 
 spelList = ['Monopoly', 'Yathzee', 'Bridge', 'Poker', 'Pesten', 'Mens erger je niet', 'Cluedo']
 gameList = []
-def spelProgramma(list, minimum):
-    totalAmount = random.randint(minimum,10)
+def spelProgramma(list, minimum, maximum):
+    totalAmount = random.randint(minimum,maximum)
     for a in range(totalAmount):
         amount = len(spelList) - 1
         games = random.randint(0, amount)
@@ -11,4 +11,4 @@ def spelProgramma(list, minimum):
         gameList.append(game)
     return gameList
 
-print(spelProgramma(gameList, 3))
+print(spelProgramma(gameList, 3, 10))
